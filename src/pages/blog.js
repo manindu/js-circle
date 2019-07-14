@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
-import { Layout } from '../components'
+import { Layout, PostPreview } from '../components'
 import styles from './styles/home.module.scss'
 
 const Blog = ({ data }) => {
@@ -8,13 +8,12 @@ const Blog = ({ data }) => {
   return (
     <Layout>
       {data.allMarkdownRemark.edges.map(post => (
-        <Link key={post.node.fields.slug} to={post.node.fields.slug} className={styles.postLink} activeClassName={styles.postActive}>
-          <div className={styles.post}>
-            <h3>{post.node.frontmatter.title}</h3>
-            <p className={styles.date}>{post.node.frontmatter.date}</p>
-            <p className={styles.postBody}>{post.node.excerpt}</p>
-          </div>
-        </Link>
+        <PostPreview
+          slug={post.node.fields.slug}
+          title={post.node.frontmatter.title}
+          createAt={post.node.frontmatter.date}
+          excerpt={post.node.excerpt}
+        />
       ))}
     </Layout>
   )

@@ -1,5 +1,5 @@
 ---
-title: "Sample post 1"
+title: "Introduction to Javascript Promises"
 date: "2019-07-13"
 author: "Manindu Wijewickrama"
 description: "Ths is a sample post"

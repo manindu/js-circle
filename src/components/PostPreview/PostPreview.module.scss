@@ -1,0 +1,35 @@
+@import "../../style/_variables.scss";
+
+.date {
+  font-size: 1.6rem;
+  color: $grey-2;
+  margin-bottom: 0.4rem;
+  margin-top: 0.4rem;
+}
+
+.post {
+  margin-bottom: 2rem;
+}
+
+.postBody {
+  color: $black-1;
+  font-weight: 400;
+  font-size: 2rem;
+}
+
+.title {
+  font-size: 3rem;
+  margin-bottom: 0;
+}
+
+.postLink {
+  color: $black-1;
+}
+
+.titleContainer {
+  background-color: $post-title-bg-color;
+  padding: 5px;
+  padding-left: 1rem;
+  border-radius: 5px;
+  margin-bottom: 2rem;
+}

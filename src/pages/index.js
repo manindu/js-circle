@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
-import { Layout, PageContainer, Header, IntroSection } from '../components'
+import { Layout, PageContainer, Header, IntroSection, PostPreview } from '../components'
 import styles from './styles/home.module.scss'
 
 export default ({ data }) => (
@@ -8,23 +8,16 @@ export default ({ data }) => (
     <Header />
     <IntroSection />
     <Layout>
-      <div>
         <div className={styles.postList}>
           {data.allMarkdownRemark.edges.map(post => (
-            <Link
-              to={post.node.fields.slug}
-              className={styles.postLink}
-              activeClassName={styles.postActive}
-            >
-              <div className={styles.post}>
-                <h3 className={styles.title}>{post.node.frontmatter.title}</h3>
-                <p className={styles.date}>{post.node.frontmatter.date}</p>
-                <p className={styles.postBody}>{post.node.excerpt}</p>
-              </div>
-            </Link>
+            <PostPreview
+              slug={post.node.fields.slug}
+              title={post.node.frontmatter.title}
+              createAt={post.node.frontmatter.date}
+              excerpt={post.node.excerpt}
+            />
           ))}
         </div>
-      </div>
     </Layout>
   </PageContainer>
 );
