@@ -1,0 +1,26 @@
+.headerSection {
+  display: flex;
+  justify-content: flex-end;
+  max-width: 650px;
+  margin: 1rem auto;
+}
+
+@media (min-width: 1440px) {
+  .layout {
+    margin: 3rem auto;
+    max-width: 100rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+@media (max-width: 1439px) {
+  .layout {
+    margin: 3rem auto;
+    max-width: 80rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+

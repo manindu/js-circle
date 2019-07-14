@@ -1,0 +1,21 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  height: 35vh;
+}
+
+.heading {
+  font-size: 2.8rem;
+}
+
+.subheading {
+  font-size: 2rem;
+}
+
+.logo {
+  border-radius: 10rem;
+  margin-bottom: 3rem;
+}

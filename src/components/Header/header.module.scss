@@ -1,0 +1,28 @@
+@import "../../style/variables";
+
+.header {
+  display: flex;
+  justify-content: flex-start;
+  padding: 5px 5px;
+  font-size: 1.6rem;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  color: $black-1;
+  padding: 3px;
+  margin-left: 1.5rem;
+
+  &ActiveHome {
+    color: $green-1;
+  }
+
+  &ActiveWork {
+    color: $purple-1;
+  }
+
+  &ActiveBlog {
+    color: $orange-1;
+  }
+}
