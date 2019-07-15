@@ -20,5 +20,11 @@ const PostPreview = ({ title, slug, createAt, excerpt }) => (
   </Link>
 );
 
+PostPreview.propTypes = {
+  title: PropTypes.string.isRequired,
+  slug: PropTypes.string.isRequired,
+  createAt: PropTypes.string.isRequired,
+  excerpt: PropTypes.string.isRequired,
+}
 
 export default PostPreview
