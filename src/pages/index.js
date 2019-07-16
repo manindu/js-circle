@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link, graphql } from 'gatsby'
+import { graphql } from 'gatsby'
 import { Layout, PageContainer, Header, IntroSection, PostPreview } from '../components'
 import styles from './styles/home.module.scss'
 
@@ -11,6 +11,7 @@ export default ({ data }) => (
         <div className={styles.postList}>
           {data.allMarkdownRemark.edges.map(post => (
             <PostPreview
+              key={post.node.fields.slug}
               slug={post.node.fields.slug}
               title={post.node.frontmatter.title}
               createAt={post.node.frontmatter.date}

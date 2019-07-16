@@ -14,7 +14,7 @@ const Post = ({ data }) => {
         <Link
           exact to="/"
           className={styles.item}
-          className={styles.itemActiveBack}
+          activeClassName={styles.itemActiveBack}
         >
           <FiArrowLeft size={20} /> Back
         </Link>

@@ -1,0 +1,38 @@
+@import "../../style/_variables.scss";
+
+.container {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 5px;
+  width: auto;
+
+  &.react {
+    background-color: $react;
+  }
+
+  &.angular {
+    background-color: $angular;
+  }
+
+  &.node-js {
+    background-color: $node;
+  }
+
+  &.vue {
+    background-color: $vue;
+  }
+
+  &.javascript {
+    background-color: $javascript;
+  }
+
+  &.general {
+    background-color: $general;
+  }
+}
+
+.tagText {
+  margin-bottom: 0;
+  font-size: 1.4rem;
+  color: $white;
+}

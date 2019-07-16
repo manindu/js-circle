@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
-import Tag from './Tag'
+import Tag from '../Tag'
 import styles from './PostPreview.module.scss'
 
 const PostPreview = ({ title, slug, createAt, excerpt, tags, author }) => (
@@ -17,7 +17,7 @@ const PostPreview = ({ title, slug, createAt, excerpt, tags, author }) => (
       </div>
       <p className={styles.date}>{createAt} by {author}</p>
       <p className={styles.postBody}>{excerpt}</p>
-      <p>{tags.map(tag => <Tag text={tag} />)}</p>
+      {tags.map(tag => <Tag key={tag} text={tag} />)}
     </div>
   </Link>
 );
