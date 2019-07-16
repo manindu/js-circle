@@ -15,6 +15,8 @@ export default ({ data }) => (
               title={post.node.frontmatter.title}
               createAt={post.node.frontmatter.date}
               excerpt={post.node.excerpt}
+              tags={post.node.frontmatter.tags}
+              author={post.node.frontmatter.author}
             />
           ))}
         </div>
@@ -32,6 +34,8 @@ export const query = graphql`
           frontmatter {
             title
             date(formatString: "DD MMMM, YYYY")
+            tags
+            author
           }
           fields {
             slug

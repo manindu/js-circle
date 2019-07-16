@@ -20,7 +20,7 @@ const Post = ({ data }) => {
         </Link>
       </div>
       <h1 className={styles.title}>{post.frontmatter.title}</h1>
-      <p className={styles.date}>{post.frontmatter.date}</p>
+      <p className={styles.date}>{post.frontmatter.date} by {post.frontmatter.author}</p>
       <div
         className={styles.para}
         dangerouslySetInnerHTML={{ __html: post.html }}
@@ -36,6 +36,7 @@ export const query = graphql`
       frontmatter {
         title
         date(formatString: "DD MMMM, YYYY")
+        author
       }
     }
   }

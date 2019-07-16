@@ -1,9 +1,10 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
+import Tag from './Tag'
 import styles from './PostPreview.module.scss'
 
-const PostPreview = ({ title, slug, createAt, excerpt }) => (
+const PostPreview = ({ title, slug, createAt, excerpt, tags, author }) => (
   <Link
     key={slug}
     to={slug}
@@ -14,8 +15,9 @@ const PostPreview = ({ title, slug, createAt, excerpt }) => (
       <div className={styles.titleContainer}>
         <h3 className={styles.title}>{title}</h3>
       </div>
-      <p className={styles.date}>{createAt}</p>
+      <p className={styles.date}>{createAt} by {author}</p>
       <p className={styles.postBody}>{excerpt}</p>
+      <p>{tags.map(tag => <Tag text={tag} />)}</p>
     </div>
   </Link>
 );
@@ -25,6 +27,12 @@ PostPreview.propTypes = {
   slug: PropTypes.string.isRequired,
   createAt: PropTypes.string.isRequired,
   excerpt: PropTypes.string.isRequired,
+  tags: PropTypes.arrayOf(PropTypes.string).isRequired,
+  author: PropTypes.string,
+}
+
+PropTypes.defaultProps = {
+  author: ''
 }
 
 export default PostPreview
