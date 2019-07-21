@@ -3,38 +3,43 @@ import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
 import PostPreview from '../PostPreview'
 import Layout from '../Layout'
+import Header from '../Header'
 import styles from './TagTemplate.module.scss'
+import PageContainer from '../PageContainer';
+import { getTitleLabel } from '../../helpers'
 
 const TagTemplate = ({ pageContext, data }) => {
   const { tag } = pageContext
   const { edges, totalCount } = data.allMarkdownRemark
-  const tagHeader = `${totalCount} ${tag} Article ${totalCount === 1 ? "" : "s"}`
+  const tagHeader = `${totalCount} ${getTitleLabel(tag)} Article${totalCount === 1 ? "" : "s"}`
 
-  console.log(edges)
   return (
-    <Layout>
-      <div className={styles.introSection}>
-        <h1 className={styles.heading}>{tagHeader}</h1>
-      </div>
-      <ul>
-        {edges.map(({ node }) => {
-          const { slug } = node.fields
-          const { title, date, tags, author } = node.frontmatter
-          console.log(node.frontmatter)
-          return (
-            <PostPreview
-              key={slug}
-              slug={slug}
-              title={title}
-              createAt={date}
-              tags={tags}
-              author={author}
-              excerpt={node.excerpt}
-            />
-          )
-        })}
-      </ul>
-    </Layout>
+    <PageContainer>
+      <Header withLogo />
+      <Layout>
+        <div className={styles.introSection}>
+          <h1 className={styles.heading}>{tagHeader}</h1>
+        </div>
+        <ul>
+          {edges.map(({ node }) => {
+            const { slug } = node.fields
+            const { title, date, tags, author } = node.frontmatter
+            console.log(node.frontmatter)
+            return (
+              <PostPreview
+                key={slug}
+                slug={slug}
+                title={title}
+                createAt={date}
+                tags={tags}
+                author={author}
+                excerpt={node.excerpt}
+              />
+            )
+          })}
+        </ul>
+      </Layout>
+    </PageContainer>
   )
 }
 

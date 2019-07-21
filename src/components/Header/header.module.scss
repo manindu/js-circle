@@ -3,6 +3,7 @@
 .header {
   display: flex;
   justify-content: flex-start;
+  align-items: center;
   padding: 5px 5px;
   font-size: 1.6rem;
 }
@@ -13,4 +14,14 @@
   color: $black-1;
   padding: 3px;
   margin-left: 1.5rem;
+}
+
+.logo {
+  object-fit: cover;
+  width: 7rem;
+  height: 7rem;
+  border-radius: 5rem;
+  margin-top: 2rem;
+  margin-right: 2rem;
+  margin-left: 2rem;
 }

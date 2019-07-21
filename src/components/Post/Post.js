@@ -6,34 +6,30 @@ import {
 } from 'react-icons/fi'
 import styles from './Post.module.scss'
 import SEO from '../Seo';
+import Header from '../Header'
+import PageContainer from '../PageContainer';
 
 const Post = ({ data }) => {
   const post = data.markdownRemark
-  console.log(post.frontmatter)
+
   return (
-    <Layout>
+    <PageContainer>
       <SEO
         title={post.frontmatter.title}
         description={post.frontmatter.description}
         meta={post.frontmatter.meta}
       />
-      <div className={styles.backSection}>
-        <Link
-          exact to="/"
-          className={styles.item}
-          activeClassName={styles.itemActiveBack}
-        >
-          <FiArrowLeft size={20} /> Back
-        </Link>
-      </div>
-      <h1>{post.frontmatter.title}</h1>
-      <p className={styles.date}>By {post.frontmatter.author}</p>
-      <div
-        className={styles.para}
-        dangerouslySetInnerHTML={{ __html: post.html }}
-      />
-      <p className={styles.date}>Published on {post.frontmatter.date}</p>
-    </Layout>
+      <Header withLogo />
+      <Layout>
+        <h1>{post.frontmatter.title}</h1>
+        <p className={styles.date}>By {post.frontmatter.author}</p>
+        <div
+          className={styles.para}
+          dangerouslySetInnerHTML={{ __html: post.html }}
+        />
+        <p className={styles.date}>Published on {post.frontmatter.date}</p>
+      </Layout>
+    </PageContainer>
   )
 }
 

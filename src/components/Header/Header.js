@@ -1,9 +1,10 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { Link, StaticQuery } from 'gatsby'
 import Tag from '../Tag'
 import styles from './header.module.scss'
 
-const Header = () => {
+const Header = ({ withLogo }) => {
   return (
     <StaticQuery
       query={graphql`
@@ -23,6 +24,9 @@ const Header = () => {
       `}
       render={data => (
         <div className={styles.header}>
+          {withLogo && <Link exact="true" to="/">
+            <img className={styles.logo} src={require('../../images/jscircle.png')} alt="JS Circle" />
+          </Link>}
           {data.allMarkdownRemark.group.map(tag => {
             return (
               <Link key={tag.fieldValue} exact="true" to={`/tags/${tag.fieldValue}`} className={styles.item} activeClassName={styles.itemActiveBlog}>
@@ -34,6 +38,14 @@ const Header = () => {
       )}
     />
   )
+}
+
+Header.propTypes = {
+  withLogo: PropTypes.bool
+}
+
+Header.defaultProps = {
+  withLogo: false
 }
 
 export default Header
