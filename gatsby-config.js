@@ -2,8 +2,11 @@ const path = require(`path`)
 
 module.exports = {
   siteMetadata: {
-    title: `Manindu Wijewickrama`,
-    siteUrl: `https://manindu.dev`,
+    title: `JS Circle`,
+    siteUrl: `https://jscircle.com`,
+    author: `Manindu Wijewickrama`,
+    keywords: ['javascript', 'react', 'node.js', 'vue'],
+    description: `Learn modern web development. JavaScript, React, Node.js, Vue.js and lot more.`
   },
   plugins: [
     `gatsby-plugin-sass`,
@@ -40,7 +43,7 @@ module.exports = {
         // icon: 'src/images/icon.png', // This path is relative to the root of the site.
       },
     },
-    'gatsby-plugin-offline',
+    // 'gatsby-plugin-offline',
     {
       resolve: `gatsby-transformer-remark`,
       options: {
@@ -52,7 +55,7 @@ module.exports = {
               inlineCodeMarker: null,
               aliases: {},
               showLineNumbers: true,
-              noInlineHighlight: true,
+              noInlineHighlight: false,
               languageExtensions: [
                 {
                   language: 'superscript',

@@ -5,6 +5,7 @@ import IntroSection from './IntroSection'
 import PostPreview from './PostPreview'
 import Tag from './Tag'
 import TagTemplate from './TagTemplate'
+import SEO from './Seo'
 
 export {
   Layout,
@@ -13,5 +14,6 @@ export {
   IntroSection,
   PostPreview,
   Tag,
-  TagTemplate
+  TagTemplate,
+  SEO
 }

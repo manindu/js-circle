@@ -1,9 +1,10 @@
 ---
-title: "Introduction to React Hooks"
+title: "Introduction to React env variables"
 date: "2019-07-13"
 author: "Manindu Wijewickrama"
 description: "Ths is a sample post"
-tags: ["JavaScript"]
+tags: ["react"]
+meta: []
 ---
 
 In this video you will learn how to setup environment variables for your React project.
