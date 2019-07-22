@@ -24,7 +24,6 @@ const TagTemplate = ({ pageContext, data }) => {
           {edges.map(({ node }) => {
             const { slug } = node.fields
             const { title, date, tags, author } = node.frontmatter
-            console.log(node.frontmatter)
             return (
               <PostPreview
                 key={slug}
