@@ -22,7 +22,7 @@ const Post = ({ data }) => {
       <Header withLogo />
       <Layout>
         <h1>{post.frontmatter.title}</h1>
-        <p className={styles.date}>By {post.frontmatter.author}</p>
+        <p className={styles.author}>By {post.frontmatter.author}</p>
         <div
           className={styles.para}
           dangerouslySetInnerHTML={{ __html: post.html }}
