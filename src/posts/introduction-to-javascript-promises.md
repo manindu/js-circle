@@ -1,5 +1,5 @@
 ---
-title: "An introduction to JavaScript Promises"
+title: "An Introduction to JavaScript Promises"
 date: "2019-07-17"
 author: "Manindu Wijewickrama"
 description: "In this post you will be learning the basics of JavaScript promises."
