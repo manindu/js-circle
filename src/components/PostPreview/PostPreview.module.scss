@@ -11,15 +11,13 @@
   margin-bottom: 2rem;
   background-color: $white;
   padding: 2rem;
-  // border-radius: 5px;
-  // border: 1px solid lightgrey;
-  // box-shadow: 1px 3px 5px lightgrey;
 }
 
 .postBody {
   color: $black-1;
   font-weight: 400;
   font-size: 2rem;
+  margin-bottom: 2rem;
 }
 
 .title {
@@ -36,11 +34,11 @@
   display: inline-block;
   padding: 5px;
   padding-left: 2rem;
-  padding-right: 1.5rem;
+  padding-right: 2rem;
   margin-left: -2rem;
   margin-bottom: 2rem;
-  background: #ff9966;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #ff5e62, #ff9966);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #ff5e62, #ff9966); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: $gradient-color-2;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, $gradient-color-1, $gradient-color-2);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, $gradient-color-1, $gradient-color-2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
 }

@@ -11,6 +11,17 @@
   font-size: 2rem;
 }
 
+.postTitle {
+  display: inline-block;
+  padding: 5px;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  color: $white;
+  background: $gradient-color-2;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, $gradient-color-1, $gradient-color-2);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, $gradient-color-1, $gradient-color-2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
 .itemActiveBack {
   color: $green-1;
 }

@@ -17,7 +17,7 @@ const PostPreview = ({ title, slug, createAt, excerpt, tags, author }) => (
       </div>
       <p className={styles.date}>{createAt} by {author}</p>
       <p className={styles.postBody}>{excerpt}</p>
-      {tags.map(tag => <Tag key={tag} text={tag} />)}
+      {tags && tags.map(tag => <Tag key={tag} text={tag} />)}
     </div>
   </Link>
 );
