@@ -7,7 +7,7 @@ tags: ["javascript"]
 meta: [{ name: 'javascript promises', content: 'Introduction to JavsaScript Promises' }]
 ---
 
-Promises are one of the ways we can handle asynchronous operations is JavaScript. Before promises, we used callbacks to deal with async code. But the usage of callbacks can lead to callback hell, if the code is not managed properly. This can make the code hard to maintain and less readable. Promises in JavaScript solves this problem for a certain extent.
+Promises are one of the ways we can handle asynchronous operations in JavaScript. Before promises, we used callbacks to deal with async code. But the usage of callbacks can lead to callback hell, if the code is not managed properly. This can make the code hard to maintain and less readable. Promises in JavaScript solves this problem for a certain extent.
 <br />
 <br />
 
