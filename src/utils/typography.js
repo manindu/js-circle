@@ -13,7 +13,7 @@ altonTheme.googleFonts = [
     ],
   },
   {
-    name: 'Open Sans',
+    name: 'IBM Plex Mono',
     styles: [
       '700',
       '600',
@@ -24,8 +24,8 @@ altonTheme.googleFonts = [
   },
 ]
 altonTheme.headerFontFamily = ['Poppins']
-altonTheme.bodyFontFamily = ['Open Sans']
-altonTheme.baseFontSize = '10px'
+altonTheme.bodyFontFamily = ['IBM Plex Mono']
+altonTheme.baseFontSize = '16px'
 altonTheme.bodyWeight = '400'
 
 const typography = new Typography(altonTheme)

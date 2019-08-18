@@ -11,8 +11,9 @@
   margin-bottom: 2rem;
   background-color: $white;
   padding: 2rem;
-  border-radius: 5px;
-  box-shadow: 1px 3px 5px lightgrey;
+  // border-radius: 5px;
+  // border: 1px solid lightgrey;
+  // box-shadow: 1px 3px 5px lightgrey;
 }
 
 .postBody {
@@ -32,13 +33,14 @@
 }
 
 .titleContainer {
-  background-color: $post-title-bg-color;
   display: inline-block;
   padding: 5px;
   padding-left: 2rem;
   padding-right: 1.5rem;
-  border-top-right-radius: 4rem;
-  border-bottom-right-radius: 4rem;
   margin-left: -2rem;
   margin-bottom: 2rem;
+  background: #ff9966;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #ff5e62, #ff9966);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #ff5e62, #ff9966); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
