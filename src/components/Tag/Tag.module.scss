@@ -2,8 +2,8 @@
 
 .container {
   display: inline-block;
-  padding: 4px 8px;
-  border-radius: 5px;
+  padding: 4px 12px;
+  border-radius: 20px;
   width: auto;
 
   &.react {
@@ -14,7 +14,7 @@
     background-color: $angular;
   }
 
-  &.node-js {
+  &.nodejs {
     background-color: $node;
   }
 
@@ -33,7 +33,7 @@
 
 .tagText {
   margin-bottom: 0;
-  font-size: 1.4rem;
-  color: $black-1;
-  font-weight: bold;
+  font-size: 1.6rem;
+  color: $white;
+  font-weight: 500;
 }

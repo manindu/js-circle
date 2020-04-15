@@ -3,7 +3,7 @@ title: "JavaScript Promise Chaining"
 date: "2019-08-18"
 author: "Manindu Wijewickrama"
 description: "In this post you will be learning about promise chaining in JavaScript"
-tags: ["javascript"]
+tags: ["node"]
 meta: [{ name: "javascript promises", content: "JavaScript Promise Chaining" }]
 ---
 

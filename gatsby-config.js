@@ -1,12 +1,12 @@
-const path = require(`path`)
+const path = require(`path`);
 
 module.exports = {
   siteMetadata: {
     title: `JS Circle`,
     siteUrl: `https://jscircle.com`,
     author: `Manindu Wijewickrama`,
-    keywords: ['javascript', 'react', 'node.js', 'vue'],
-    description: `Learn modern web development. JavaScript, React, Node.js, Vue.js and lot more.`
+    keywords: ["javascript", "react", "node.js", "vue"],
+    description: `Learn modern web development. JavaScript, React, Node.js, Vue.js and lot more.`,
   },
   plugins: [
     `gatsby-plugin-sass`,
@@ -14,7 +14,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `src`,
-        path: `${ __dirname }/src/`,
+        path: `${__dirname}/src/`,
       },
     },
     `gatsby-plugin-sitemap`,
@@ -46,14 +46,14 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: 'Manindu Wijewickrama',
-        short_name: 'Manindu',
-        start_url: '/',
-        background_color: '#FFF',
-        theme_color: '#FFF',
+        name: "Manindu Wijewickrama",
+        short_name: "Manindu",
+        start_url: "/",
+        background_color: "#FFF",
+        theme_color: "#FFF",
         // Enables "Add to Homescreen" prompt and disables browser UI (including back button)
         // see https://developers.google.com/web/fundamentals/web-app-manifest/#display
-        display: 'standalone',
+        display: "standalone",
         // icon: 'src/images/icon.png', // This path is relative to the root of the site.
       },
     },
@@ -65,15 +65,15 @@ module.exports = {
           {
             resolve: `gatsby-remark-prismjs`,
             options: {
-              classPrefix: 'language-',
+              classPrefix: "language-",
               inlineCodeMarker: null,
               aliases: {},
               showLineNumbers: true,
               noInlineHighlight: false,
               languageExtensions: [
                 {
-                  language: 'superscript',
-                  extend: 'javascript',
+                  language: "superscript",
+                  extend: "javascript",
                   definition: {
                     superscript_types: /(SuperType)/,
                   },
@@ -84,10 +84,10 @@ module.exports = {
                   },
                 },
               ],
-            }
-          }
-        ]
-      }
-    }
+            },
+          },
+        ],
+      },
+    },
   ],
-}
+};

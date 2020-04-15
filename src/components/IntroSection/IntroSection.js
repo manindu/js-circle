@@ -1,7 +1,6 @@
-import React from 'react'
-import { graphql, StaticQuery } from 'gatsby'
-import Img from 'gatsby-image/withIEPolyfill'
-import styles from './IntroSection.module.scss'
+import React from "react";
+import { graphql, StaticQuery } from "gatsby";
+import styles from "./IntroSection.module.scss";
 
 export default ({ data }) => {
   return (
@@ -19,21 +18,18 @@ export default ({ data }) => {
           }
         }
       `}
-      render={data => {
+      render={(data) => {
         return (
           <div className={styles.container}>
-            <Img className={styles.logo} fixed={data.file.childImageSharp.fixed} />
             <h2 className={styles.heading}>Learn Modern Web Development</h2>
             <p className={styles.subheading}>
               JavaScript, React, Vue.js, Node.js and lot more
             </p>
           </div>
-        )
+        );
       }}
     />
   );
-}
-
-
+};
 
 // export default IntroSection

@@ -1,27 +1,33 @@
-import React from 'react'
-import { graphql } from 'gatsby'
-import { Layout, PageContainer, Header, IntroSection, PostPreview } from '../components'
-import styles from './styles/home.module.scss'
+import React from "react";
+import { graphql } from "gatsby";
+import {
+  Layout,
+  PageContainer,
+  Header,
+  IntroSection,
+  PostPreview,
+} from "../components";
+import styles from "./styles/home.module.scss";
 
 export default ({ data }) => (
   <PageContainer>
-    <Header />
+    <Header withLogo />
     <IntroSection />
-    <Layout>
-        <div className={styles.postList}>
-          {data.allMarkdownRemark.edges.map(post => (
-            <PostPreview
-              key={post.node.fields.slug}
-              slug={post.node.fields.slug}
-              title={post.node.frontmatter.title}
-              createAt={post.node.frontmatter.date}
-              excerpt={post.node.excerpt}
-              tags={post.node.frontmatter.tags}
-              author={post.node.frontmatter.author}
-            />
-          ))}
-        </div>
-    </Layout>
+    <div className={styles.homeLayout}>
+      <div className={styles.postList}>
+        {data.allMarkdownRemark.edges.map((post) => (
+          <PostPreview
+            key={post.node.fields.slug}
+            slug={post.node.fields.slug}
+            title={post.node.frontmatter.title}
+            createAt={post.node.frontmatter.date}
+            excerpt={post.node.excerpt}
+            tags={post.node.frontmatter.tags}
+            author={post.node.frontmatter.author}
+          />
+        ))}
+      </div>
+    </div>
   </PageContainer>
 );
 
@@ -46,4 +52,4 @@ export const query = graphql`
       }
     }
   }
-`
+`;
