@@ -11,8 +11,10 @@ import styles from "./styles/home.module.scss";
 
 export default ({ data }) => (
   <PageContainer>
-    <Header withLogo />
-    <IntroSection />
+    <div className={styles.topSection}>
+      <Header withLogo />
+      <IntroSection />
+    </div>
     <div className={styles.homeLayout}>
       <div className={styles.postList}>
         {data.allMarkdownRemark.edges.map((post) => (

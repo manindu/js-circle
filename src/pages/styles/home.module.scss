@@ -62,6 +62,19 @@
   }
 }
 
+.topSection {
+  width: 100vw;
+  // background-image: url(../../images/dot-grid.png);
+  // background-repeat: repeat;
+  // background-color: #667eea;
+}
+
+.overlay {
+  width: 100%;
+  background-color: gold;
+  height: 100%;
+}
+
 .homeLayout {
   width: 100vw;
   display: flex;
