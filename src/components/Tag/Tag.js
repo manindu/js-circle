@@ -4,7 +4,6 @@ import styles from "./Tag.module.scss";
 import { getTitleLabel } from "../../helpers";
 
 const Tag = ({ text }) => {
-  console.log(text.replace(".", "").toLowerCase());
   return (
     <div
       className={`${styles.container} ${

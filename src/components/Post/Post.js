@@ -1,17 +1,15 @@
-import React from 'react'
-import { graphql, Link } from 'gatsby'
-import Layout from '../Layout'
-import {
-  FiArrowLeft
-} from 'react-icons/fi'
-import styles from './Post.module.scss'
-import SEO from '../Seo';
-import Header from '../Header'
-import PageContainer from '../PageContainer';
+import React from "react";
+import { graphql, Link } from "gatsby";
+import { DiscussionEmbed } from "disqus-react";
+import Layout from "../Layout";
+import { FiArrowLeft } from "react-icons/fi";
+import styles from "./Post.module.scss";
+import SEO from "../Seo";
+import Header from "../Header";
+import PageContainer from "../PageContainer";
 
-const Post = ({ data }) => {
-  const post = data.markdownRemark
-
+const Post = ({ data, location }) => {
+  const post = data.markdownRemark;
   return (
     <PageContainer>
       <SEO
@@ -28,10 +26,18 @@ const Post = ({ data }) => {
           dangerouslySetInnerHTML={{ __html: post.html }}
         />
         <p className={styles.date}>Published on {post.frontmatter.date}</p>
+        <DiscussionEmbed
+          shortname="example"
+          config={{
+            url: location.href,
+            identifier: location.href,
+            title: post.frontmatter.title,
+          }}
+        />
       </Layout>
     </PageContainer>
-  )
-}
+  );
+};
 
 export const query = graphql`
   query($slug: String!) {
@@ -49,6 +55,6 @@ export const query = graphql`
       }
     }
   }
-`
+`;
 
-export default Post
+export default Post;

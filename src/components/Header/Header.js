@@ -1,11 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 import { Link, StaticQuery } from "gatsby";
+import { FiMoreHorizontal, FiXCircle } from "react-icons/fi";
 import Tag from "../Tag";
 import styles from "./header.module.scss";
 import { getTitleLabel } from "../../helpers";
 
 const Header = ({ withLogo }) => {
+  const [menuOpen, toggleMenu] = useState(false);
+
   return (
     <StaticQuery
       query={graphql`
@@ -24,32 +27,72 @@ const Header = ({ withLogo }) => {
         }
       `}
       render={(data) => (
-        <div className={styles.header}>
-          {withLogo && (
-            <Link exact="true" to="/">
-              <img
-                className={styles.logo}
-                src={require("../../images/jscircle.png")}
-                alt="JS Circle"
-              />
-            </Link>
-          )}
-          <div className={styles.linkGroup}>
-            {data.allMarkdownRemark.group.map((tag) => {
-              return (
-                <Link
-                  key={tag.fieldValue}
-                  exact="true"
-                  to={`/tags/${tag.fieldValue}`}
-                  className={styles.item}
-                  activeClassName={styles.itemActiveBlog}
-                >
-                  <p>{getTitleLabel(tag.fieldValue)}</p>
-                </Link>
-              );
-            })}
+        <>
+          <div className={styles.headerSmall}>
+            {withLogo && (
+              <Link exact="true" to="/">
+                <img
+                  className={styles.logo}
+                  src={require("../../images/jscircle.png")}
+                  alt="JS Circle"
+                />
+              </Link>
+            )}
+            <div>
+              {menuOpen ? (
+                <FiXCircle size={24} onClick={() => toggleMenu(!menuOpen)} />
+              ) : (
+                <FiMoreHorizontal
+                  size={24}
+                  onClick={() => toggleMenu(!menuOpen)}
+                />
+              )}
+            </div>
           </div>
-        </div>
+          <div className={styles.header}>
+            {withLogo && (
+              <Link exact="true" to="/">
+                <img
+                  className={styles.logo}
+                  src={require("../../images/jscircle.png")}
+                  alt="JS Circle"
+                />
+              </Link>
+            )}
+            <div className={styles.linkGroup}>
+              {data.allMarkdownRemark.group.map((tag) => {
+                return (
+                  <Link
+                    key={tag.fieldValue}
+                    exact="true"
+                    to={`/tags/${tag.fieldValue}`}
+                    className={styles.item}
+                    activeClassName={styles.itemActiveBlog}
+                  >
+                    <p>{getTitleLabel(tag.fieldValue)}</p>
+                  </Link>
+                );
+              })}
+            </div>
+          </div>
+          {menuOpen && (
+            <div className={styles.listMenu}>
+              {data.allMarkdownRemark.group.map((tag) => {
+                return (
+                  <Link
+                    key={tag.fieldValue}
+                    exact="true"
+                    to={`/tags/${tag.fieldValue}`}
+                    className={styles.item}
+                    activeClassName={styles.itemActiveBlog}
+                  >
+                    <p>{getTitleLabel(tag.fieldValue)}</p>
+                  </Link>
+                );
+              })}
+            </div>
+          )}
+        </>
       )}
     />
   );
