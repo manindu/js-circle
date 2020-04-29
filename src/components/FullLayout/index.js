@@ -1,3 +1,3 @@
-import FullLayout from "./Fulllayout";
+import FullLayout from "./FullLayout";
 
 export default FullLayout;
