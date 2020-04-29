@@ -1,9 +1,18 @@
 const path = require(`path`);
 
+const {
+  NODE_ENV,
+  URL: NETLIFY_SITE_URL = "https://jscircle.com/",
+  DEPLOY_PRIME_URL: NETLIFY_DEPLOY_URL = NETLIFY_SITE_URL,
+  CONTEXT: NETLIFY_ENV = NODE_ENV,
+} = process.env;
+const isNetlifyProduction = NETLIFY_ENV === "production";
+const siteUrl = isNetlifyProduction ? NETLIFY_SITE_URL : NETLIFY_DEPLOY_URL;
+
 module.exports = {
   siteMetadata: {
     title: `JS Circle`,
-    siteUrl: `https://jscircle.com`,
+    siteUrl: siteUrl,
     author: `Manindu Wijewickrama`,
     keywords: ["javascript", "react", "node.js", "vue"],
     description: `Learn modern web development. JavaScript, React, Node.js, Vue.js and lot more.`,
@@ -15,6 +24,27 @@ module.exports = {
       options: {
         name: `src`,
         path: `${__dirname}/src/`,
+      },
+    },
+    {
+      resolve: "gatsby-plugin-robots-txt",
+      options: {
+        resolveEnv: () => NETLIFY_ENV,
+        env: {
+          production: {
+            policy: [{ userAgent: "*" }],
+          },
+          "branch-deploy": {
+            policy: [{ userAgent: "*", disallow: ["/"] }],
+            sitemap: null,
+            host: null,
+          },
+          "deploy-preview": {
+            policy: [{ userAgent: "*", disallow: ["/"] }],
+            sitemap: null,
+            host: null,
+          },
+        },
       },
     },
     `gatsby-plugin-sitemap`,
