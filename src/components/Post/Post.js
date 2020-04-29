@@ -27,7 +27,7 @@ const Post = ({ data, location }) => {
         />
         <p className={styles.date}>Published on {post.frontmatter.date}</p>
         <DiscussionEmbed
-          shortname="example"
+          shortname={process.env.GATSBY_DISQUS_NAME}
           config={{
             url: location.href,
             identifier: location.href,
