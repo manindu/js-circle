@@ -10,7 +10,6 @@ import PageContainer from "../PageContainer";
 
 const Post = ({ data, location }) => {
   const post = data.markdownRemark;
-  console.log(process.env.GATSBY_DISQUS_NAME);
   return (
     <PageContainer>
       <SEO
