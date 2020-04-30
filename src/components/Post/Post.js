@@ -10,6 +10,7 @@ import PageContainer from "../PageContainer";
 
 const Post = ({ data, location }) => {
   const post = data.markdownRemark;
+  console.log(process.env.GATSBY_DISQUS_NAME);
   return (
     <PageContainer>
       <SEO
@@ -27,7 +28,7 @@ const Post = ({ data, location }) => {
         />
         <p className={styles.date}>Published on {post.frontmatter.date}</p>
         <DiscussionEmbed
-          shortname={process.env.GATSBY_DISQUS_NAME}
+          shortname="jscircle"
           config={{
             url: location.href,
             identifier: location.href,

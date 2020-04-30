@@ -93,3 +93,14 @@
   flex-direction: column;
   padding-left: 2rem;
 }
+
+.backgroundCircle {
+  position: absolute;
+  width: 150rem;
+  height: 150rem;
+  right: -20rem;
+  top: -80rem;
+  border-radius: 100rem;
+  background-color: lighten(#667eea, 30%);
+  z-index: -2;
+}

@@ -7,12 +7,12 @@ altonTheme.googleFonts = [
     styles: ["700", "600", "500", "400", "200"],
   },
   {
-    name: "Work Sans",
+    name: "Muli",
     styles: ["700", "600", "500", "400", "200"],
   },
 ];
 altonTheme.headerFontFamily = ["Poppins"];
-altonTheme.bodyFontFamily = ["Work Sans"];
+altonTheme.bodyFontFamily = ["Muli"];
 altonTheme.baseFontSize = "16px";
 altonTheme.bodyWeight = "400";
 
