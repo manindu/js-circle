@@ -1,5 +1,5 @@
 ---
-title: "Understanding JavaScript Array Reduce Method"
+title: "Understanding the JavaScript Array Reduce Method"
 date: "2020-05-03"
 author: "Manindu Wijewickrama"
 description: "In this post you will learn how to use the JavaScript reduce method"
@@ -8,7 +8,7 @@ meta:
   [
     {
       name: "javascript array methods",
-      content: "Understanding JavaScript Array Reduce Method",
+      content: "Understanding the JavaScript Array Reduce Method",
     },
   ]
 ---
@@ -82,5 +82,7 @@ Try removing the default value. Still, You will get the same answer for the sum.
 Sum is 331
 ```
 
+You can find the final version of the code [here.](https://repl.it/@maninduw/JS-Reduce)
+<br />
 <br />
 That's all about the **reduce()** method. If you have any questions, feel free to ask them in the comment section below.
