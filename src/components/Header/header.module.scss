@@ -75,6 +75,17 @@
   color: $black-1;
   margin-left: 3rem;
   text-align: center;
+  font-size: 1.8rem;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.itemMobile {
+  display: flex;
+  align-items: center;
+  color: $black-1;
+  text-align: center;
 
   &:hover {
     text-decoration: underline;

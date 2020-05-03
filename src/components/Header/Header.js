@@ -83,7 +83,7 @@ const Header = ({ withLogo }) => {
                     key={tag.fieldValue}
                     exact="true"
                     to={`/tags/${tag.fieldValue}`}
-                    className={styles.item}
+                    className={menuOpen ? styles.itemMobile : styles.item}
                     activeClassName={styles.itemActiveBlog}
                   >
                     <p>{getTitleLabel(tag.fieldValue)}</p>
