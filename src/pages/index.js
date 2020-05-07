@@ -12,7 +12,7 @@ import styles from "./styles/home.module.scss";
 
 export default ({ data }) => (
   <PageContainer>
-    <SEO />
+    <SEO title="JS Circle - Learn JavaScript, React, Node.js, Vue.js and lot more." />
     <div className={styles.topSection}>
       <Header withLogo />
       <IntroSection />
