@@ -6,11 +6,13 @@ import {
   Header,
   IntroSection,
   PostPreview,
+  SEO,
 } from "../components";
 import styles from "./styles/home.module.scss";
 
 export default ({ data }) => (
   <PageContainer>
+    <SEO />
     <div className={styles.topSection}>
       <Header withLogo />
       <IntroSection />

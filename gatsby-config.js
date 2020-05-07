@@ -11,11 +11,19 @@ const siteUrl = isNetlifyProduction ? NETLIFY_SITE_URL : NETLIFY_DEPLOY_URL;
 
 module.exports = {
   siteMetadata: {
-    title: `JS Circle`,
+    title: `JS Circle - Learn JavaScript, React, Node.js, Vue.js and lot more.`,
     siteUrl: siteUrl,
     author: `Manindu Wijewickrama`,
-    keywords: ["javascript", "react", "node.js", "vue"],
-    description: `Learn modern web development. JavaScript, React, Node.js, Vue.js and lot more.`,
+    keywords: [
+      "javascript",
+      "react",
+      "node.js",
+      "vue",
+      "react tutorials",
+      "react tips",
+      "javascript tutorials",
+    ],
+    description: `Learn JavaScript, React, Node.js, Vue.js and lot more.`,
   },
   plugins: [
     `gatsby-plugin-sass`,
