@@ -314,7 +314,7 @@ const TopBar = () => {
 };
 ```
 
-We get the theme state switchTheme from the ThemeContext. Then, inside the return block, we check the current theme and display the correct icon. And, pass in an onClick listner to each icon in order to set the theme when we click on them. Clicking on the sun icon will enable the light mode. And clicking on the moon icon will enable the dark mode. We're done with TopBar.js. Let's head over to Title.js.
+We get the theme state and switchTheme function from the ThemeContext. Then, inside the return block, we check the current theme and display the correct icon. And, pass in an onClick listner to each icon in order to set the theme when we click on them. Clicking on the sun icon will enable the light mode. And clicking on the moon icon will enable the dark mode. We're done with TopBar.js. Let's head over to Title.js.
 
 Inside Title.js component, change the color to use the title color which is available in the theme. Now the code should look like this.
 
